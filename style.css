@@ -145,8 +145,6 @@ header.intro-tile {
     background-color: #dbf6fd;
 }
 
-
-
 .tile h2 {
     text-align: center;
 }
@@ -193,7 +191,6 @@ header.intro-tile {
 /* ---------- Kontakt ---------- */
 .contact-list {
     padding-left: 0;
-    margin: 0;
     list-style-type: none;
     list-style-image: none;
 }
@@ -201,13 +198,26 @@ header.intro-tile {
 .contact-row:not(:last-child) {
     margin-bottom: .9rem; /* Abstand zwischen den Kontakt-Zeilen*/
 }
-.contact-row {
+
+.contact-row1 {
+        gap: 0.5rem 2.6rem;
+
+}
+
+.contact-row2 {
+        gap: 0.5rem 2rem;
+
+}
+
+.contact-row1,
+.contact-row2 {
     display: grid;
     grid-template-columns: max-content auto;
-    gap: 0.5rem 2rem;
     align-items: center;
     margin-bottom: 1.2rem; /* Leere unter Telefon: +41... etc. */
 }
+
+.contact-row1 {margin-right: 10rem;}
 
 #telefon {
     margin-top: 1rem;
@@ -215,10 +225,12 @@ header.intro-tile {
     /* falls du vertikalen Abstand brauchst */
 }
 
-
-.contact-row span {
+.contact-row1 .contact-row2 span {
     font-weight: normal;
 }
+
+.tel-mail {font-weight: 400;}
+
 
 /* ---------- Tag ---------- */
 .tag {
