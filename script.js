@@ -12,7 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.addEventListener("mouseleave", () => {
             tile.classList.remove("hovered");
         });
+
+    // Tiles beim Scrollen einblenden
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Nur einmal animieren
+            }
+        });
+    }, {
+        threshold: 0.1
     });
+
+    tiles.forEach(tile => observer.observe(tile));
+
+});
 
     // Tile Hover beim Scrollen prüfen (Maus über Tile)
     window.addEventListener("scroll", () => {
