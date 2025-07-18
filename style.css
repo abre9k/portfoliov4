@@ -195,17 +195,13 @@ header.intro-tile {
     list-style-image: none;
 }
 
-.contact-row:not(:last-child) {
-    margin-bottom: .9rem; /* Abstand zwischen den Kontakt-Zeilen*/
-}
-
 .contact-row1 {
-        gap: 0.5rem 2.6rem;
+    gap: 0.5rem 2.6rem;
 
 }
 
 .contact-row2 {
-        gap: 0.5rem 2rem;
+    gap: 0.5rem 2rem;
 
 }
 
@@ -214,22 +210,13 @@ header.intro-tile {
     display: grid;
     grid-template-columns: max-content auto;
     align-items: center;
-    margin-bottom: 1.2rem; /* Leere unter Telefon: +41... etc. */
+    margin-bottom: .9rem;
+    /* Platz zw. Mail und Tel*/
 }
 
-.contact-row1 {margin-right: 10rem;}
-
-#telefon {
-    margin-top: 1rem;
-    display: inline-block;
-    /* falls du vertikalen Abstand brauchst */
+.tel-mail {
+    font-weight: 400;
 }
-
-.contact-row1 .contact-row2 span {
-    font-weight: normal;
-}
-
-.tel-mail {font-weight: 400;}
 
 
 /* ---------- Tag ---------- */
