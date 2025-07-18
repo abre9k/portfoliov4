@@ -2,9 +2,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/*
 .no-select {
     user-select: none;
 }
+*/
 
 .hidden {
     display: none;
