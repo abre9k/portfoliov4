@@ -102,8 +102,10 @@ header.intro-tile {
     padding: 2rem 1rem;
 }
 
-.subtitle {font-style: italic;
-font-weight: normal;}
+.subtitle {
+    font-style: italic;
+    font-weight: normal;
+}
 
 /* ---------- Tiles ---------- */
 
@@ -141,15 +143,13 @@ font-weight: normal;}
     text-align: center;
 }
 
-/* List-Bullets nur in normalen Tiles */
 .tile ul {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 1.5rem;
 }
 
 .tile ul:not(.contact-list)>li {
     position: relative;
-    padding-left: 1.5rem;
     margin-bottom: .8rem;
     transition: transform .2s ease;
     transform-origin: left;
@@ -190,12 +190,23 @@ font-weight: normal;}
     list-style-image: none;
 }
 
+.contact-row:not(:last-child) {
+    margin-bottom: .9rem; /* Abstand zwischen den Kontakt-Zeilen*/
+}
 .contact-row {
     display: grid;
     grid-template-columns: max-content auto;
-    gap: .5rem 1rem;
+    gap: 0.5rem 2rem;
     align-items: center;
+    margin-bottom: 1.2rem; /* Leere unter Telefon: +41... etc. */
 }
+
+#telefon {
+    margin-top: 1rem;
+    display: inline-block;
+    /* falls du vertikalen Abstand brauchst */
+}
+
 
 .contact-row span {
     font-weight: normal;
@@ -281,7 +292,7 @@ font-weight: normal;}
 .menu-list a {
     text-decoration: none;
     color: #0077ccdc;
-;
+    ;
 }
 
 .menu-list a:hover {
